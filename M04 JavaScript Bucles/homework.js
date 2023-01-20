@@ -45,15 +45,11 @@ function saludo(idioma) {
    // Si "idioma" es "ingles", devuelve "Hello!".
    // Si "idioma" no es ninguno de los anteriores o es `undefined` devuelve "Hola!".
    // Tu código:
-   if (idioma === 'aleman') {
-      return 'Guten Tag!';
-   } if (idioma === 'mandarin') {
-      return 'Ni Hao!';
-   } if (idioma === 'ingles') {
-      return 'Hello!';
-   } if (idioma === 'undefined') {
-      return 'Hola!';
-   } return 'Hola!';
+   if (idioma === 'aleman') return 'Guten Tag!';
+   if (idioma === 'mandarin') return 'Ni Hao!';
+   if (idioma === 'ingles') return 'Hello!';
+   if (idioma === 'undefined') return 'Hola!';
+   return 'Hola!';
 }
 
 function colors(color) {
@@ -83,18 +79,16 @@ function esDiezOCinco(num) {
    // Retornar "true" si "num" es 10 o 5.
    // De lo contrario, retornar "false".
    // Tu código:
-   if (num === 10 || num === 5) {
-      return true;
-   }  return false;
+   if (num === 10 || num === 5) return true;
+   else return false;
 }
 
 function estaEnRango(num) {
    // Retornar "true" si "num" es menor que 50 y mayor que 20.
    // De lo contrario, retornar "false".
    // Tu código:
-   if (num < 50 && num > 20) {
-      return true;
-   } return false;
+   if (num < 50 && num > 20) return true;
+   else return false;
 }
 
 function esEntero(num) {
