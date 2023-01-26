@@ -7,7 +7,11 @@ function crearGato(nombre, edad) {
    // La propiedad "meow" será una función que retorne el string: "Meow!".
    // Retornar el objeto.
    // Tu código:
-   var crearGato = {nombre: nombre, edad: edad, meow: function() {return ('Meow!')}}
+   var crearGato = {
+      nombre: nombre, 
+      edad: edad, 
+      meow: function meow() {return 'Meow!'}
+   }
    return crearGato;
 }
 
@@ -62,7 +66,7 @@ function tieneEmail(objetoUsuario) {
    // Verifica si el "objetoUsuario", en su propiedad "email", posee un valor definido.
    // En ese caso retornar True. Caso contrario, False.
    // Tu código:
-   if (objetoUsuario.email != undefined) return true;
+   if (objetoUsuario['email'] != undefined && objetoUsuario['email'] !== null) return true;
    else {
       return false;
    }
@@ -72,10 +76,8 @@ function tienePropiedad(objeto, propiedad) {
    // Verifica si el objeto recibido posee una propiedad con el mismo nombre que el parámetro "propiedad".
    // En ese caso retornar True. Caso contrario, False.
    // Tu código:
-   if (objeto[propiedad]) return true;
-   else {
-      return false;
-   }
+   // return (!!objeto[propiedad]) --> los !! indican una respuesta true o false,!! = doble negación 
+   return objeto.hasOwnProperty(propiedad);
 }
 
 function verificarPassword(objetoUsuario, password) {
@@ -112,6 +114,18 @@ function pasarUsuarioAPremium(objetoMuchosUsuarios) {
    // Define esta propiedad de todos los usuarios como True.
    // Retornar el arreglo.
    // Tu código:
+
+   /*for (let usuario of objetoMuchosUsuarios) {
+      usuario.esPremium = true;
+   } return objetoMuchosUsuarios;
+   */
+
+   /*for (let i = 0; i < objetoMuchosUsuarios.length; i++) {
+      objetoMuchosUsuarios[i].esPremium = true;
+   } 
+   return objetoMuchosUsuarios;
+   */
+
    for (let i = 0; i < objetoMuchosUsuarios.length; i++) {
       objetoMuchosUsuarios[i].esPremium = true;
    } 
